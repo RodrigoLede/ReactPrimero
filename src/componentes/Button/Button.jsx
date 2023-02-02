@@ -1,10 +1,10 @@
 import "./button.css";
 
-function Button() {
+function Button(props) {
 
     return(
-        <button className="btn">Click Me</button>
-    )
+        <button className="btn">{props.text}</button>
+    );
 }
 
 export default Button;

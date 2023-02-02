@@ -1,9 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
 import Card from "./componentes/Card"
+import Button from './componentes/Button/Button';
+import NavBar from './componentes/NavBar/NavBar';
 
 function App() {
-  const title = "¡¡¡¡¡Bienvenidos a React!!!!!";
 
   function hacerAlgo() {
     alert("hola");
@@ -16,18 +17,17 @@ function App() {
   };
   return (
     <div>
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          {title}
-          <Card/>
-        </header>
-      </div>
+      <NavBar />
       <div style={miEstilo} className="catalogo">
-        <Card/>
-        <Card/>
-        <button onClick={hacerAlgo}>Click Me</button>
+        <Card img= "/imgs/Captura.jpg" title= "Stumpjumper" price= {500} detail= "Expert pro"/>
+        <Card img= "/imgs/Captura1.jpg" title= "Enduro" price= {800} detail= "Expert pro"/>
+        <Card img= "/imgs/Captura2.jpg" title= "Turbo Levo" price= {600} detail= "Expert pro"/>
       </div>
+
+      <button onClick={hacerAlgo}>Hacer Algo</button>
+
+      <Button text= "Apretame" />
+    
     </div>
   );
 }

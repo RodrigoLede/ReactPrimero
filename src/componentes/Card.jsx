@@ -1,22 +1,18 @@
 import Button from "./Button/Button";
 
-function Card(){
-
-    const producto= {
-        precio: 500,
-        nombre: "Remera",
-        descripcion: "La remera",
-    };
+function Card(props){
+    
 
     return(
         <div>
-            <h3> {producto.nombre} </h3>
+            <h3>{props.title}</h3>
             <br />
-            <h3>$ {producto.precio} </h3>
-            <small>{producto.descripcion}</small>
-            <Button />
+            <img height= "270px" src={props.img} alt={props.title} />
+            <h3>${props.price}</h3>
+            <small>{props.detail}</small>
+            <Button text= "Tócame"/>
         </div>
-    )
+    );
 }
 
 export default Card;
