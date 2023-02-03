@@ -3,7 +3,7 @@
     position: relative;
     margin: 10px 15px;
     min-height: 520px;
-    width: 280px;
+    width: 450px;
     height: 100%;
     border-radius: 4px;
     box-shadow: 0px 0px 3px rgba(0,0,0,0.22);
@@ -24,8 +24,8 @@
   }
   
   .item-card_img{
-    width: 280px;
-    height: 260px;
+    width: 450px;
+    height: 280px;
     object-fit: cover;
   }
   .item-card_img img{
@@ -41,7 +41,6 @@
   
   .item-card_detail{
     padding: 12px 8px;
-    
     height: 105px;
   }
   

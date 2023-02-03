@@ -14,7 +14,7 @@ function NavBar () {
                     <img src="/imgs/Logo.jpg" alt="Logo tienda" />
                 </Link>
             {links.map((elemento) => (
-                <NavItem href="/">{elemento}</NavItem>))}
+                <NavItem href="/">{elemento}</NavItem>))}   
             {<CartWidget img= "/imgs/Chart.jpg" />}
             </ul>
         </nav>

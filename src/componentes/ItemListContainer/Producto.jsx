@@ -19,7 +19,7 @@ export default function Producto(props){
             </div>
             <Link to= {'/detalle/${id}'}>  
                 <Button padding= "16px" >
-                    Tócame
+                    Saber más
                 </Button>
             </Link>
             <br />
