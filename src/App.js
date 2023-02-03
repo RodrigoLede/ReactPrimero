@@ -22,7 +22,6 @@ function App() {
           <Route path="/" element= {<ItemListContainer />} />
           <Route path="/contacto" element= { <div><h1> Contactenos </h1></div>} />
           <Route path="/detalle/:itemid" element= {<ItemDetailContainer />} />
-
           <Route path="*" element= { <div><h2> Pagina no encontrada </h2></div>} />
         </Routes>
       </BrowserRouter>
