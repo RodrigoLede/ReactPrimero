@@ -1,5 +1,4 @@
 import React from 'react'
-import './App.css';
 import Button from './componentes/Button/Button';
 import NavBar from './componentes/NavBar/NavBar';
 import ItemCount from './componentes/ItemCount/ItemCount';

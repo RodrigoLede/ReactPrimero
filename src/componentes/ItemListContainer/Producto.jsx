@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import "./card.css";
 
-export default function Item(props){
-    const {title, price, img, detail, id} = props.item;
+export default function Producto(props){
+    const {title, price, img, detail, id, category, stock} = props.item;
 
     return(
         <div className="item-card">
