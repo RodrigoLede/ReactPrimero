@@ -19,11 +19,10 @@ function App() {
       <BrowserRouter>
         <NavBar />
         <Routes>
-        <Route path="/" element={<HomePage />} />
-          <Route path="/category/:categoryid" element={<ItemListContainer />} />
-
+          <Route path="/" element={<HomePage />} />
+          
           <Route path="/detalle/:itemid" element={<ItemDetailContainer />} />
-
+          <Route path="/category/:categoryid" element={<ItemListContainer />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
 
