@@ -2,8 +2,6 @@ import {useState, useEffect} from "react";
 import Flex from "../Flex/Flex";
 import Producto from "./Producto";
 
-
-
 export default function ItemListContainer() {
 
   const bikes = [
@@ -92,7 +90,9 @@ export default function ItemListContainer() {
 
   return (
     <Flex>
-        {bikes.map((itemIterado) => <Producto item={itemIterado} />)}
+      {bikes.map((itemIterado) => {
+      return <Producto key={itemIterado.id} item={itemIterado} />
+      })}
     </Flex>
   );
 }

@@ -4,7 +4,7 @@ export default function NavItem ({href, children}){
 
     return(
         <li className="nav-item">
-            <Link className="nav-link" to={href}>
+            <Link className="nav-bar_link" to={href}>
                 {children}
             </Link>
         </li>
