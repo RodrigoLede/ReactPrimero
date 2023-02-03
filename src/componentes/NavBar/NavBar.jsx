@@ -1,5 +1,6 @@
 import CartWidget from "./CartWidget";
 import NavItem from "./NavItem";
+import {Link} from "react-router-dom";
 
 function NavBar (props) {
 
@@ -8,9 +9,9 @@ function NavBar (props) {
         <nav>
            <ul>
            <li>
-                    <a href="/">
+                    <Link to="/">
                         <img src="/imgs/Logo.jpg" alt="Logo tienda" />
-                    </a>
+                    </Link>
                 </li>
                 <NavItem href="/"> Bicicletas de XC </NavItem>
                 <NavItem href="/"> Bicicletas de All Moountain/Enduro </NavItem>
