@@ -1,9 +1,9 @@
-import React from 'react'
-import Button from './componentes/Button/Button';
-import NavBar from './componentes/NavBar/NavBar';
-import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
-import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailContainer';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import React from "react";
+import Button from "./componentes/Button/Button";
+import NavBar from "./componentes/NavBar/NavBar";
+import ItemListContainer from "./componentes/ItemListContainer/ItemListContainer";
+import ItemDetailContainer from "./componentes/ItemDetailContainer/ItemDetailContainer";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import PageNotFound from "./pages/PageNotFound";
 
