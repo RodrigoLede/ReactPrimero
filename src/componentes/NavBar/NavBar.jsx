@@ -1,26 +1,22 @@
 import CartWidget from "./CartWidget";
+import NavItem from "./NavItem";
 
 function NavBar (props) {
 
 
     return(
         <nav>
-            <img src="/" alt="Logo" />
-            <ul>
-                <li>
-                <a href="/"> Inicio </a>
+           <ul>
+           <li>
+                    <a href="/">
+                        <img src="/imgs/Logo.jpg" alt="Logo tienda" />
+                    </a>
                 </li>
-                <li>
-                <a href="/"> Bicicletas de XC </a>
-                </li>
-                <li>
-                <a href="/"> Bicicletas de All Moountain/Enduro</a>
-                </li>
-                <li>
-                <a href="/"> Bicicletas Eléctricas</a>
-                </li>
+                <NavItem href="/"> Bicicletas de XC </NavItem>
+                <NavItem href="/"> Bicicletas de All Moountain/Enduro </NavItem>
+                <NavItem href="/"> Bicicletas Eléctricas</NavItem>
             </ul>
-            <CartWidget />
+            <CartWidget img= "/imgs/Chart.jpg" />
         </nav>
 
     );

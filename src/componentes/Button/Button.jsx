@@ -1,10 +1,20 @@
+import React from "react";
 import "./button.css";
 
-function Button(props) {
+export default function Button(props) {
+    let [colorState , setColorState] = React.useState ()
 
+    let styleButton = {
+        padding: props.padding,
+        backgroundColor: colorState, 
+    };
+
+    function handleClick(evt){
+        setColorState("black");
+    };
     return(
-        <button className="btn">{props.text}</button>
+        <button onClick= { handleClick } style= {styleButton} className="btn">
+            {props.children}
+        </button>
     );
 }
-
-export default Button;

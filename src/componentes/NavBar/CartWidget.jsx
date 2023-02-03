@@ -1,8 +1,5 @@
-function CartWidget () {
+export default function CartWidget (props) {
     return(
-        <img src="/" alt="Carrito" />
-
+        <img src={props.img} alt="Carrito"/>
     );
 }
-
-export default CartWidget;
