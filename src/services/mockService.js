@@ -90,6 +90,22 @@ const obtenerProductos = () => {
            resolve(bikes); 
         }, 2000);
     });
-};   
+};
+
+const getBike = () => {
+    return new Promise((resolve, reject) => { 
+        let error = false;
+  
+        setTimeout(() => {
+           resolve(bikes[0]); 
+        }, 2000);
+    });
+};  
 
 export default obtenerProductos;
+
+export {getBike}
+
+
+ 
+

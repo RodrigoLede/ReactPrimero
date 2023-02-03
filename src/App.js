@@ -26,7 +26,6 @@ function App() {
           <Route path="*" element= { <div><h2> Pagina no encontrada </h2></div>} />
         </Routes>
       </BrowserRouter>
-      <ItemCount stock={8} />
       <button onClick={hacerAlgo}>Hacer Algo</button>
       <Button>Apretame</Button>
     </>
