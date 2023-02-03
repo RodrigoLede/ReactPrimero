@@ -1,14 +1,14 @@
 import React from 'react'
 import Button from './componentes/Button/Button';
 import NavBar from './componentes/NavBar/NavBar';
-import ItemCount from './componentes/ItemCount/ItemCount';
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailContainer';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import HomePage from "./pages/HomePage";
+import PageNotFound from "./pages/PageNotFound";
 
 
 function App() {
-
 
   function hacerAlgo() {
     alert("hola");
@@ -19,11 +19,14 @@ function App() {
       <BrowserRouter>
         <NavBar />
         <Routes>
-          <Route path="/" element= {<ItemListContainer />} />
-          <Route path="/contacto" element= { <div><h1> Contactenos </h1></div>} />
-          <Route path="/detalle/:itemid" element= {<ItemDetailContainer />} />
-          <Route path="*" element= { <div><h2> Pagina no encontrada </h2></div>} />
+        <Route path="/" element={<HomePage />} />
+          <Route path="/category/:categoryid" element={<ItemListContainer />} />
+
+          <Route path="/detalle/:itemid" element={<ItemDetailContainer />} />
+
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
+
       </BrowserRouter>
       <button onClick={hacerAlgo}>Hacer Algo</button>
       <Button>Apretame</Button>

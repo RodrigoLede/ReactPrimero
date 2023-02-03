@@ -1,19 +1,29 @@
 import { useState, useEffect } from "react";
-import obtenerProductos from "../../services/mockService";
+import { useParams } from "react-router-dom";
+import obtenerProductos, { getBikebyCategory } from "../../services/mockService";
 import Flex from "../Flex/Flex";
 import Producto from "./Producto";
 
 export default function ItemListContainer() {
 
   const [bikes, setBikes] = useState([])
-  
-  useEffect(
-    () => {
-      obtenerProductos ().then((respuesta) => {
+  let {categoryid} =  useParams();
+
+  useEffect(() => {
+    if (!categoryid) {
+      obtenerProductos ()
+      .then((respuesta) => {
         setBikes(respuesta);
       });
+    }
+    else {
+      getBikebyCategory(categoryid)
+      .then((respuesta) => {
+        setBikes(respuesta);
+      });
+    }
     },
-    []
+    [categoryid]
   );
 
   return (

@@ -17,7 +17,7 @@ export default function Producto(props){
                 <h3 className="item-card_price">$ {price}</h3>
                 <small>{detail}</small>
             </div>
-            <Link to= {'/detalle/${id}'}>  
+            <Link to= {`/detalle/${id}`}>
                 <Button padding= "16px" >
                     Saber más
                 </Button>

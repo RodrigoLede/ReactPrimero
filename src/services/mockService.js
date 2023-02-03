@@ -83,8 +83,7 @@ const bikes = [
   ];
 
 const obtenerProductos = () => {
-    return new Promise((resolve, reject) => { 
-        let error = false;
+    return new Promise((resolve) => { 
   
         setTimeout(() => {
            resolve(bikes); 
@@ -92,19 +91,36 @@ const obtenerProductos = () => {
     });
 };
 
-const getBike = () => {
+const getBike = (idURL) => {
     return new Promise((resolve, reject) => { 
-        let error = false;
-  
+      const reqItem = bikes.find ((item)=> {
+        return item.id === parseInt(idURL)
+      });
+
         setTimeout(() => {
-           resolve(bikes[0]); 
+          if (reqItem)
+           resolve(reqItem);
+          else
+            reject("No se encontro el producto deseado") 
+        }, 2000);
+    });
+};  
+
+const getBikebyCategory = (categoryURL) => {
+    return new Promise((resolve, reject) => {  
+      const reqItem = bikes.filter (item=> 
+         item.category === categoryURL);
+
+        setTimeout(() => {
+           resolve(reqItem);
         }, 2000);
     });
 };  
 
 export default obtenerProductos;
 
-export {getBike}
+export {getBike, getBikebyCategory}
+
 
 
  
