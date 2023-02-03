@@ -3,24 +3,21 @@ import NavItem from "./NavItem";
 import "./navbar.css";
 import {Link} from "react-router-dom";
 
-function NavBar (props) {
+function NavBar () {
 
+    const links = ["CrossCountry (XC)", "Enduro/All Mountain", "DownHill (DH)", "E-Bikes"];
 
     return(
         <nav>
-           <ul>
-           <li>
-                    <Link to="/">
-                        <img src="/imgs/Logo.jpg" alt="Logo tienda" />
-                    </Link>
-                </li>
-                <NavItem href="/"> Bicicletas de XC </NavItem>
-                <NavItem href="/"> Bicicletas de All Moountain/Enduro </NavItem>
-                <NavItem href="/"> Bicicletas Eléctricas</NavItem>
+           <ul className="nav-menu">
+            <Link to="/">
+                    <img src="/imgs/Logo.jpg" alt="Logo tienda" />
+                </Link>
+            {links.map((elemento) => (
+                <NavItem href="/">{elemento}</NavItem>))}
+            {<CartWidget img= "/imgs/Chart.jpg" />}
             </ul>
-            <CartWidget img= "/imgs/Chart.jpg" />
         </nav>
-
     );
 
 }

@@ -10,5 +10,4 @@ function Flex(props) {
     </div>
   );
 }
-
 export default Flex;
