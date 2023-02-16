@@ -20,3 +20,7 @@ export default function MaterialApoyo() {
   <Route path="*" element={<PageNotFound />} />
 </Routes>
 </BrowserRouter>
+
+function mostrarMensaje() {
+  alert("Usted ha agragado "+ count + " producto/s al carrito")
+}
