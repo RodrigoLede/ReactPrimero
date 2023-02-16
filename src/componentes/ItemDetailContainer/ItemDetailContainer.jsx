@@ -11,9 +11,10 @@ function ItemDetailContainer() {
       getBike(params.itemid)
       .then((respuesta) => {
         setBike(respuesta);
-      });
+      })
+      .catch((error) => alert(error));
     },
-    [params.itemid]
+    []
   );
 
   return (

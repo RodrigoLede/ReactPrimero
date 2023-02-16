@@ -97,12 +97,10 @@ const getBike = (idURL) => {
         return item.id === parseInt(idURL)
       });
 
-        setTimeout(() => {
-          if (reqItem)
-           resolve(reqItem);
-          else
-            reject("No se encontro el producto deseado") 
-        }, 2000);
+      setTimeout(() => {
+        if (reqItem) resolve(reqItem);
+        else reject("No se encontro el producto deseado"); 
+      }, 2000);
     });
 };  
 
@@ -112,7 +110,8 @@ const getBikebyCategory = (categoryURL) => {
          item.category === categoryURL);
 
         setTimeout(() => {
-           resolve(reqItem);
+          if (reqItem) resolve(reqItem);
+          else reject("No se encontro el producto deseado");
         }, 2000);
     });
 };  
