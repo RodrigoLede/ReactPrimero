@@ -3,10 +3,10 @@ import ItemListContainer from "../componentes/ItemListContainer/ItemListContaine
 
 
 function HomePage() {
+
   return (
     <div>
-      <h1>HomePage</h1>
-     <ItemListContainer />
+      <ItemListContainer />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import CartWidget from "./CartWidget";
 import NavItem from "./NavItem";
 import "./navbar.css";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function NavBar () {
 
@@ -10,11 +10,11 @@ function NavBar () {
     return(
         <nav>
            <ul className="nav-menu">
-            <Link to="/">
-                    <img src="/imgs/Logo.jpg" alt="Logo tienda" />
-                </Link>
+            <Link to="/"> 
+                <img src="/imgs/Logo.jpg" alt="Logo tienda" />
+            </Link>
             {links.map((elemento) => (
-                <NavItem key={elemento} href= "/">{elemento}</NavItem>))}   
+                <NavItem key={elemento} Link to= "/">{elemento}</NavItem>))}   
             {<CartWidget img= "/imgs/Chart.jpg" />}
             </ul>
         </nav>

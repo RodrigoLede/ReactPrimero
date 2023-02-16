@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { getBike } from '../../services/mockService';
 import ItemDetail from './ItemDetail';
 
-export default function ItemDetailContainer() {
+function ItemDetailContainer() {
   const [bike, setBike] = useState([])
   let params = useParams();
 
@@ -13,7 +13,7 @@ export default function ItemDetailContainer() {
         setBike(respuesta);
       });
     },
-    []
+    [params.itemid]
   );
 
   return (
@@ -25,3 +25,5 @@ export default function ItemDetailContainer() {
     />
   );
 }
+
+export default ItemDetailContainer;

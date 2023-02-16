@@ -4,7 +4,7 @@ import obtenerProductos, { getBikebyCategory } from "../../services/mockService"
 import Flex from "../Flex/Flex";
 import Producto from "./Producto";
 
-export default function ItemListContainer() {
+function ItemListContainer() {
 
   const [bikes, setBikes] = useState([])
   let {categoryid} =  useParams();
@@ -34,4 +34,6 @@ export default function ItemListContainer() {
     </Flex>
   );
 }
+
+export default ItemListContainer;
 

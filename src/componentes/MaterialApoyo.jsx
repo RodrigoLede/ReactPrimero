@@ -10,3 +10,13 @@ export default function MaterialApoyo() {
     </div>
   )
 }
+
+
+<BrowserRouter>
+<Routes>
+  <Route path="/" element={ <ItemListContainer /> } />
+  <Route path="/detalle/:itemid" element={<ItemDetailContainer />} />
+  <Route path="/category/:categoryid" element={<ItemListContainer />} />
+  <Route path="*" element={<PageNotFound />} />
+</Routes>
+</BrowserRouter>

@@ -1,11 +1,12 @@
 import React from "react";
 import Button from "./componentes/Button/Button";
-import NavBar from "./componentes/NavBar/NavBar";
-import ItemListContainer from "./componentes/ItemListContainer/ItemListContainer";
 import ItemDetailContainer from "./componentes/ItemDetailContainer/ItemDetailContainer";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import HomePage from "./pages/HomePage";
+import ItemListContainer from "./componentes/ItemListContainer/ItemListContainer";
+import NavBar from "./componentes/NavBar/NavBar";
+import { BrowserRouter } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import PageNotFound from "./pages/PageNotFound";
+import HomePage from "./pages/HomePage";
 
 
 function App() {
@@ -16,19 +17,17 @@ function App() {
   
   return (
     <>
-      <BrowserRouter>
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          
-          <Route path="/detalle/:itemid" element={<ItemDetailContainer />} />
-          <Route path="/category/:categoryid" element={<ItemListContainer />} />
-          <Route path="*" element={<PageNotFound />} />
-        </Routes>
-
-      </BrowserRouter>
-      <button onClick={hacerAlgo}>Hacer Algo</button>
-      <Button>Apretame</Button>
+        <BrowserRouter>
+          <NavBar />
+          <Routes>
+            <Route path="/" element={ <ItemListContainer /> } />
+            <Route path="/detalle/:itemid" element={<ItemDetailContainer />} />
+            <Route path="/category/:categoryid" element={<ItemListContainer />} />
+            <Route path="*" element={<PageNotFound />} />
+          </Routes>
+        </BrowserRouter>
+        <button onClick={hacerAlgo}>Hacer Algo</button>
+        <Button>Apretame</Button>
     </>
   );
 }
