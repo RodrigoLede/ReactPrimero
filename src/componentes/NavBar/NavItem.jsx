@@ -1,12 +1,14 @@
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
-export default function NavItem ({to, children}){
+const NavItem = ({ to, children }) => {
 
-    return(
+    return (
         <li className="nav-item">
             <Link className="nav-bar_link" to={to}>
                 {children}
             </Link>
         </li>
     );
-}
+};
+
+export default NavItem;

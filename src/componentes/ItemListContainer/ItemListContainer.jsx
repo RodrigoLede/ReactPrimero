@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import obtenerProductos, { getBikebyCategory } from "../../services/mockService";
+import obtenerProductos, { getBikeByCategory } from "../../services/mockService";
 import Flex from "../Flex/Flex";
 import Producto from "./Producto";
 
 function ItemListContainer() {
 
   const [bikes, setBikes] = useState([])
-  let {categoryid} =  useParams();
+  let { categoryid } =  useParams();
 
   useEffect(() => {
     if (!categoryid) {
@@ -17,7 +17,7 @@ function ItemListContainer() {
       });
     }
     else {
-      getBikebyCategory(categoryid)
+      getBikeByCategory(categoryid)
       .then((respuesta) => {
         setBikes(respuesta);
       });

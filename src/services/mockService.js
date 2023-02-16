@@ -4,7 +4,7 @@ const bikes = [
       "title": "Stumpjumper",
       "price": 4584.09,
       "stock": 6,
-      "category": "Riviera",
+      "category": "Enduro",
       "detail": "Brass",
       "img": "/imgs/Captura.jpg"
     }, 
@@ -13,7 +13,7 @@ const bikes = [
       "title": "Stumpjumper",
       "price": 3745.56,
       "stock": 8,
-      "category": "Mazda6",
+      "category": "Enduro",
       "detail": "Aluminum",
       "img": "/imgs/Captura.jpg"
     }, 
@@ -22,7 +22,7 @@ const bikes = [
       "title": "Stumpjumper",
       "price": 9319.8,
       "stock": 2,
-      "category": "Tucson",
+      "category": "Enduro",
       "detail": "Vinyl",
       "img": "/imgs/Captura.jpg"
     }, 
@@ -31,7 +31,7 @@ const bikes = [
       "title": "Enduro",
       "price": 4291.61,
       "stock": 5,
-      "category": "Bonneville",
+      "category": "DownHill",
       "detail": "Stone",
       "img": "/imgs/Captura1.jpg"
     }, 
@@ -40,7 +40,7 @@ const bikes = [
       "title": "Enduro",
       "price": 6176.83,
       "stock": 5,
-      "category": "LS",
+      "category": "DownHill",
       "detail": "Wood",
       "img": "/imgs/Captura1.jpg"
     }, 
@@ -49,7 +49,7 @@ const bikes = [
       "title": "Enduro",
       "price": 4786.26,
       "stock": 6,
-      "category": "RX-7",
+      "category": "DownHill",
       "detail": "Wood",
       "img": "/imgs/Captura1.jpg"
     }, 
@@ -58,7 +58,7 @@ const bikes = [
       "title": "Turbo Levo",
       "price": 4609.36,
       "stock": 3,
-      "category": "Silhouette",
+      "category": "E-Bikes",
       "detail": "Aluminum",
       "img": "/imgs/Captura2.jpg"
     }, 
@@ -67,7 +67,7 @@ const bikes = [
       "title": "Turbo Levo",
       "price": 9501.73,
       "stock": 2,
-      "category": "Summit",
+      "category": "E-Bikes",
       "detail": "Stone",
       "img": "/imgs/Captura2.jpg"
     }, 
@@ -76,7 +76,7 @@ const bikes = [
       "title": "Turbo Levo",
       "price": 138.77,
       "stock": 8,
-      "category": "Econoline E250",
+      "category": "E-Bikes",
       "detail": "Aluminum",
       "img": "/imgs/Captura2.jpg"
     }, 
@@ -104,7 +104,7 @@ const getBike = (idURL) => {
     });
 };  
 
-const getBikebyCategory = (categoryURL) => {
+const getBikeByCategory = (categoryURL) => {
     return new Promise((resolve, reject) => {  
       const reqItem = bikes.filter (item=> 
          item.category === categoryURL);
@@ -118,7 +118,7 @@ const getBikebyCategory = (categoryURL) => {
 
 export default obtenerProductos;
 
-export {getBike, getBikebyCategory}
+export {getBike, getBikeByCategory};
 
 
 

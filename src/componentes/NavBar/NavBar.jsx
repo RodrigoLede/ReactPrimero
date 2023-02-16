@@ -5,17 +5,18 @@ import { Link } from "react-router-dom";
 
 function NavBar () {
 
-    const links = ["CrossCountry (XC)", "Enduro/All Mountain", "DownHill (DH)", "E-Bikes"];
-
     return(
         <nav>
            <ul className="nav-menu">
-            <Link to="/"> 
+            <Link to ="/"> 
                 <img src="/imgs/Logo.jpg" alt="Logo tienda" />
             </Link>
-            {links.map((elemento) => (
-                <NavItem key={elemento} Link to= "/">{elemento}</NavItem>))}   
-            {<CartWidget img= "/imgs/Chart.jpg" />}
+            <NavItem Link to= "/category/Enduro">Enduro/All Mountain</NavItem>
+            <NavItem Link to= "/category/DownHill">DownHill</NavItem>
+            <NavItem Link to= "/category/E-Bikes">E-Bikes</NavItem>
+            <Link to ="/cart">
+                <CartWidget img= "/imgs/Chart.jpg" />
+            </Link>
             </ul>
         </nav>
     );
