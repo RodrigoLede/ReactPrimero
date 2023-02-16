@@ -1,19 +1,8 @@
 import React, { useState } from "react";
+import Button from "../Button/Button";
 import ItemCount from "../ItemCount/ItemCount";
 
-function ItemDetail({
-  title,
-  img,
-  category,
-  price,
- }) {
-
-  const [countInCart, setCountInCart] = useState(0);
-
-  function handleAddToCart(count){
-    console.log(`Agregaste al carrito ${count} unidades`);
-    setCountInCart (count);
-  }
+function ItemDetail({title, img, category, price, onAddToCart }) {
   return (
     <div className="card-detail_main">
       <div className="card-detail_img">
@@ -24,13 +13,11 @@ function ItemDetail({
         <h4 className="priceTag">$ {price}</h4>
         <p>{category}</p>
     </div>
-    {
-      countInCart === 0 ?
-        <ItemCount onAddToCart={handleAddToCart} />
-      :
-      <a href="/cart">Ir al Carrito</a>
-    }
-      </div>
+      <ItemCount onAddToCart={onAddToCart} />
+      <a href="/cart"> 
+        <Button> Ir al Carrito </Button>
+      </a>
+    </div>
   );
 }
 

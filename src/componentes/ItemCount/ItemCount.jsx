@@ -2,17 +2,15 @@ import React from 'react'
 import { useState } from 'react'
 import "./itemcount.css";
 
-export default function ItemCount({ onAddToCart }) {
+function ItemCount({ onAddToCart }) {
+    const[count, setCount] = useState(1);   
 
-    const[count, setCount] = useState(1);
-       
     function handleSumar () {
         if (count < 8 )
             setCount (count +1)
         else
             setCount (8) 
     }
-
     function handleRestar () {
         setCount (count -1)
     }
@@ -31,3 +29,5 @@ export default function ItemCount({ onAddToCart }) {
     </div>
   )
 }
+
+export default ItemCount;
